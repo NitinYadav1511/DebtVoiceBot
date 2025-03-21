@@ -10,7 +10,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.memory import ConversationBufferMemory
 
 # Load Groq API Key from environment variable (or set it directly)
-os.environ["GROQ_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = "YOUR_GROQ-AI_API_KEY"
 
 # Initialize the LLM with ChatGroq
 llm = ChatGroq(model_name="llama3-8b-8192")
