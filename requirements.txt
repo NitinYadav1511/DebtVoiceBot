@@ -1,0 +1,10 @@
+torch
+pandas
+transformers
+speechrecognition
+pyttsx3
+langchain[groq]
+langchain
+langchain-community
+sentence_transformers
+groq
