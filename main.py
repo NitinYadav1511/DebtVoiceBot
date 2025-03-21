@@ -52,6 +52,7 @@ chatbot_chain = LLMChain(llm=llm, prompt=prompt, memory=memory)
 
 # Initialize text-to-speech engine
 engine = pyttsx3.init()
+engine.setProperty('rate', 150) # Set speech rate to 150 words per minute
 
 def text_to_speech(text):
     engine.say(text)
@@ -60,6 +61,7 @@ def text_to_speech(text):
 # Function to convert speech to text
 def speech_to_text():
     recognizer = sr.Recognizer()
+    recognizer.pause_threshold = 1.0
     with sr.Microphone() as source:
         print("Listening...")
         audio = recognizer.listen(source)
